@@ -1,0 +1,1030 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>Bucket Documentation</title>
+
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/reset.css' />
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/global.css' />
+		
+		<!--[if IE 6]>
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/ie6.css' />
+		<![endif]-->
+		
+		<!--[if IE 7]>
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/ie7.css' />
+		<![endif]-->
+		
+		<meta name="author" content="Backstack Development" />
+
+		<meta http-equiv="expires" content="-1" />
+
+	</head>
+
+	<body>
+
+		<div id="container">
+
+			<div id="holder">
+				
+				<div id="header">
+
+					<div id="title">
+						
+						<h1>Bucket</h1>
+
+						<h2>A Layout and Asset Library for CodeIgniter</h2>
+						
+					</div>
+					
+					<ul id="navigation">
+						
+						<li class="first"><a href="index.html">Introduction</a></li>
+						<li><a href="downloading-and-installing.html">Downloading &amp; Installing</a></li>
+						<li><a href="usage.html">Usage</a></li>
+						<li class="last current"><a href="function-reference.html">Function Reference</a></li>
+						
+					</ul>
+
+				</div>
+
+				<div id="content">
+
+					<h3>Function Reference</h3>
+					
+					<div class="navigation">
+						
+						<ul>
+							
+							<li>
+								
+								<a href="#library">Library</a>
+								
+								<ul>
+									
+									<li><a href="#set-behaviour-id">set_behaviour_id()</a></li>
+									<li><a href="#get-behaviour-id">get_behaviour_id()</a></li>
+									<li><a href="#get-behaviour-item">get_behaviour_item()</a></li>
+									
+									<li><a href="#set-layout-id">set_layout_id()</a></li>
+									<li><a href="#get-layout-id">get_layout_id()</a></li>
+									<li><a href="#set-content-id">set_content_id()</a></li>
+									<li><a href="#get-content-id">get_content_id()</a></li>
+									
+									<li><a href="#render-layout">render_layout()</a></li>
+									<li><a href="#render-content">render_content()</a></li>
+									<li><a href="#render-partial">render_partial()</a></li>
+									
+									<li><a href="#set-data">set_data()</a></li>
+									<li><a href="#set-all-data">set_all_data()</a></li>
+									<li><a href="#remove-data">remove_data()</a></li>
+									<li><a href="#remove-all-data">remove_all_data()</a></li>
+									<li><a href="#get-data">get_data()</a></li>
+									<li><a href="#get-all-data">get_all_data()</a></li>
+									
+									<li><a href="#add-asset">add_asset()</a></li>
+									<li><a href="#add-css">add_css()</a></li>
+									<li><a href="#add-js">add_js()</a></li>
+									
+									<li><a href="#remove-asset">remove_asset()</a></li>
+									<li><a href="#remove-css">remove_css()</a></li>
+									<li><a href="#remove-js">remove_js()</a></li>
+									
+									<li><a href="#render-assets-tags">render_assets_tags()</a></li>
+									<li><a href="#render-asset-tag">render_asset_tag()</a></li>
+									<li><a href="#render-asset-set">render_asset_set()</a></li>
+									
+								</ul>
+								
+							</li>
+							
+							<li>
+								
+								<a href="#helper">Helper</a>
+								
+								<ul>
+									
+									<li><a href="#helper-render-content">render_content()</a></li>
+									<li><a href="#helper-render-partial">render_partial()</a></li>
+									
+									<li><a href="#helper-get-asset">get_asset()</a></li>
+									<li><a href="#helper-get-css">get_css()</a></li>
+									<li><a href="#helper-get-js">get_js()</a></li>
+									
+									<li><a href="#helper-asset">asset()</a></li>
+									<li><a href="#helper-css">css()</a></li>
+									<li><a href="#helper-js">js()</a></li>
+									<li><a href="#helper-img">img()</a></li>
+									
+								</ul>
+								
+							</li>
+							
+						</ul>
+						
+					</div>
+
+					<a name="library"></a>
+
+					<h4>Library</h4>
+
+					<a name="get-behaviour-id"></a>
+
+					<h5 class="function">get_behaviour_id()</h5>
+
+					<p>Gets the current behaviour ID</p>
+				
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type">(string)</span> The current behaviour ID</p>
+				
+					<code>
+
+						$behaviour_id = $this->bucket->get_behaviour_id();
+
+					</code>
+					
+					<a name="set-behaviour-id"></a>
+
+					<h5 class="function">set_behaviour_id(<span class="type">$behaviour_id</span>)</h5>
+
+					<p>Sets the current behaviour ID</p>
+				
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$behaviour_id</td>
+						<td class="description">The behaviour ID</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+				
+					<code>
+
+						$this->bucket->set_behaviour_id($behaviour_id);
+
+					</code>
+					
+					<a name="get-behaviour-item"></a>
+
+					<h5 class="function">get_behaviour_item(<span class="var">$behaviour_item_id</span>)</h5>
+
+					<p>Gets a behaviour's configuration item</p>
+				
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$behaviour_item_id</td>
+						<td class="description">The behaviour item ID</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type mixed">(mixed)</span> The behaviour item</p>
+				
+					<code>
+
+						$combine_css = $this->bucket->get_behaviour_item('combine_css');
+
+					</code>
+
+					<a name="set-layout-id"></a>
+
+					<h5 class="function">set_layout_id(<span class="var">$layout_id</span>)</h5>
+
+					<p>Sets the layout ID.</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr>
+							<td class="required">required</td><td class="type">(string)</td><td class="name">$layout_id</td>
+							<td class="description">The layout ID</td>
+						</tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->set_layout_id('main');
+
+					</code>
+
+					<a name="get-layout-id"></a>
+
+					<h5 class="function">get_layout_id()</h5>
+
+					<p>Gets the current layout ID.</p>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type">(string)</span> The current layout ID</p>
+					
+					<code>
+
+						$layout_id = $this->bucket->get_layout_id();
+
+					</code>
+
+					<a name="set-content-id"></a>
+					
+					<h5 class="function">set_content_id(<span class="var">$content_id</span>)</h5>
+
+					<p>Sets the content ID.</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$content_id</td>
+						<td class="description">The content ID</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->set_content_id('main');
+
+					</code>
+
+					<a name="get-content-id"></a>
+
+					<h5 class="function">get_content_id()</h5>
+
+					<p>Gets a string containing the current content ID.</p>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type">(string)</span> The current content ID</p>
+					
+					<code>
+
+						$content_id = $this->bucket->get_content_id();
+
+					</code>
+					
+					<a name="render-layout"></a>
+
+					<h5 class="function">render_layout(<span class="var">$return = FALSE</span>)</h5>
+
+					<p>Renders the layout.</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr>
+							<td class="optional">optional</td>
+							<td class="type">(boolean)</td>
+							<td class="name">$return</td>
+							<td class="description">Return or echo the layout</td>
+						</tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void string">(void|string)</span> The layout or void if echoed</p>
+					
+					<code>
+
+						$this->bucket->render_layout();
+
+					</code>
+					
+					<a name="render-content"></a>
+
+					<h5 class="function">render_content(<span class="var">$return = FALSE</span>)</h5>
+
+					<p>Renders the content.</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr>
+							<td class="optional">optional</td>
+							<td class="type">(boolean)</td>
+							<td class="name">$return</td>
+							<td class="description">Return or echo the layout</td>
+						</tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void string">(void|string)</span> The content or void if echoed</p>
+					
+					<code>
+
+						$this->bucket->render_content();
+
+					</code>
+					
+					<a name="render-partial"></a>
+
+					<h5 class="function">render_partial(<span class="var">$partial_id</span>, <span class="var">$data = array()</span>, <span class="var">$return = FALSE</span>)</h5>
+
+					<p>Renders a partial.</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$partial_id</td>
+						<td class="description">The partial ID</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">Data for use in the partial</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">boolean</td><td class="name">$return</td>
+						<td class="description">Return or echo the partial</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void string">(void|string)</span> The partial or void if echoed</p>
+					
+					<code>
+
+						$this->bucket->render_partial('latest_posts', array('latest_posts' => $latest_posts));
+
+					</code>
+					
+					<a name="set-data"></a>
+
+					<h5 class="function">set_data(<span class="var">$key</span>, <span class="var">$data</span>)</h5>
+
+					<p>Sets data for use in the layout or content.</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$key</td>
+						<td class="description">The name of the data to set</td></tr>
+						
+						<tr><td class="required">required</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">The data</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->set_data('users', $users);
+
+					</code>
+					
+					<a name="set-all-data"></a>
+
+					<h5 class="function">set_all_data(<span class="var">$data</span>)</h5>
+
+					<p>Sets all data for use in the layout or content.</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters" cellspacing="0" cellpadding="0">
+						
+						<tr>
+							
+							<td class="required">required</td>
+							<td class="type">(array)</td>
+							<td class="name">$data</td>
+							<td class="description">The data</td>
+							
+						</tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+						
+						$data['users'] = $users;
+						<br /><br />
+						$this->bucket->set_data($data);
+						
+					</code>
+					
+					<a name="remove-data"></a>
+
+					<h5 class="function">remove_data(<span class="var">$key</span>)</h5>
+
+					<p>Removes existing data to be used in the layout or content</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$key</td>
+						<td class="description">The name of the data to removed</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->remove_data('users');
+
+					</code>
+					
+					<a name="remove-all-data"></a>
+
+					<h5 class="function">remove_all_data()</h5>
+
+					<p>Removes all existing data for use in the layout or content</p>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->remove_all_data();
+
+					</code>
+					
+					<a name="get-data"></a>
+
+					<h5 class="function">get_data(<span class="var">$key = ''</span>)</h5>
+
+					<p>Gets a piece of data or all existing data for use in the layout or content</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="optional">optional</td><td class="type">(string)</td><td class="name">$key</td>
+						<td class="description">The name of the data to get</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type mixed">(mixed|array)</span> The data or the data if no key parameter was specified</p>
+					
+					<code>
+
+						$users = $this->bucket->get_data('users');
+
+					</code>
+					
+					<a name="get-all-data"></a>
+
+					<h5 class="function">get_all_data()</h5>
+
+					<p>Gets all data for use in the layout or content</p>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type array">(array)</span> The data</p>
+					
+					<code>
+
+						$data = $this->bucket->get_all_data();
+
+					</code>
+					
+					<a name="add-asset"></a>
+
+					<h5 class="function">add_asset(<span class="var">$type</span>, <span class="var">$name</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Adds an asset for use in the layout or content</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$type</td>
+						<td class="description">The type of asset</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(string)</td><td class="name">$name</td>
+						<td class="description">The name of the asset</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">Configuration of the asset</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->add_asset('css', 'reset', array('cache' => TRUE));
+
+					</code>
+					
+					<a name="add-css"></a>
+
+					<h5 class="function">add_css(<span class="var">$name</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Adds a CSS asset for use in the layout or content</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$name</td>
+						<td class="description">The name of the asset</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">Configuration of the asset</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->add_css('ie', array('condcom' => 'gte IE6'));
+
+					</code>
+					
+					<a name="add-js"></a>
+
+					<h5 class="function">add_js(<span class="var">$name</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Adds a JS asset for use in the layout or content</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$name</td>
+						<td class="description">The name of the asset</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">Configuration of the asset</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->add_js('jquery', array());
+
+					</code>
+					
+					<a name="remove-asset"></a>
+
+					<h5 class="function">remove_asset(<span class="var">$type</span>, <span class="var">$name</span>)</h5>
+
+					<p>Removes an asset for use in the layout or content</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$type</td>
+						<td class="description">The type of asset</td></tr>
+						
+						<tr><td class="required">required</td><td class="type">(string|array)</td><td class="name">$name</td>
+						<td class="description">The name of the asset or an array of asset names</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->remove_asset('js', 'jquery');
+
+					</code>
+					
+					<code>
+
+						$this->bucket->remove_asset('css', array('reset', 'global'));
+
+					</code>
+					
+					<a name="remove-css"></a>
+
+					<h5 class="function">remove_css(<span class="var">$name</span>)</h5>
+
+					<p>Removes CSS assets for use in the layout or content</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string|array)</td><td class="name">$name</td>
+						<td class="description">The name of the asset or an array of asset names</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->remove_css('reset');
+
+					</code>
+					
+					<code>
+
+						$this->bucket->remove_css(array('reset', 'global'));
+
+					</code>
+					
+					<a name="remove-js"></a>
+
+					<h5 class="function">remove_js(<span class="var">$name</span>)</h5>
+
+					<p>Removes JS assets for use in the layout or content</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+						
+						<tr><td class="required">required</td><td class="type">(string|array)</td><td class="name">$name</td>
+						<td class="description">The name of the asset or an array of asset names</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type void">(void)</span></p>
+					
+					<code>
+
+						$this->bucket->remove_js('jquery');
+
+					</code>
+					
+					<code>
+
+						$this->bucket->remove_js(array('jquery', 'menu'));
+
+					</code>
+					
+					<a name="render-assets-tags"></a>
+
+					<h5 class="function">render_assets_tags(<span class="var">$type = ''</span>, <span class="var">$group = ''</span>)</h5>
+
+					<p>Renders CSS and/or JS asset tags</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="optional">optional</td><td class="type">(string)</td><td class="name">$type</td>
+						<td class="description">The type of asset</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(string)</td><td class="name">$group</td>
+						<td class="description">The group that the assets belong to</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type">(string)</span> The asset tags</p>
+					
+					<code>
+
+						$this->bucket->render_asset_tags('css');
+
+					</code>
+					
+					<code>
+
+						$this->bucket->render_asset_tags('js', 'bottom');
+
+					</code>
+					
+					<a name="render-asset-tag"></a>
+
+					<h5 class="function">render_asset_tag(<span class="var">$type</span>, <span class="var">$name</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Renders an asset tag</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$type</td>
+						<td class="description">The type of asset</td></tr>
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$name</td>
+						<td class="description">The name of the asset</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">Configuration of the asset</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type">(string)</span> The asset tag</p>
+					
+					<code>
+
+						$this->bucket->render_asset_tag('img', 'logo.png', array('attributes' => array('title' => 'Logo', 'alt' => 'Our logo')));
+
+					</code>
+					
+					<a name="render-asset-set"></a>
+
+					<h5 class="function">render_asset_set(<span class="var">$type</span>, <span class="var">$extension</span>, <span class="var">$names</span>, <span class="var">$return = TRUE</span>)</h5>
+
+					<p>Renders an asset set</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$type</td>
+						<td class="description">The asset set type</td></tr>
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$extension</td>
+						<td class="description">The asset set extension</td></tr>
+						
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$names</td>
+						<td class="description">A separated list of asset names</td></tr>
+						
+						<tr><td class="required">optional</td><td class="type">(boolean)</td><td class="name">$return</td>
+						<td class="description">Return or echo the asset set</td></tr>
+						
+					</table>
+					
+					<h6>Returns</h6>
+					
+					<p class="returns"><span class="type">(string)</span> The contents of the assets in the set</p>
+					
+					<code>
+
+						$this->bucket->render_asset_tag('img', 'logo.png', array('attributes' => array('title' => 'Logo', 'alt' => 'Our logo')));
+
+					</code>
+					
+					<a name="helper"></a>
+					
+					<h4>Helper</h4>
+
+					<a name="helper-render-content"></a>
+
+					<h5 class="function">render_content()</h5>
+
+					<p>Renders the content</p>
+					
+					<code>
+
+						&lt;?= render_content(); ?&gt;
+
+					</code>
+					
+					<a name="helper-render-partial"></a>
+
+					<h5 class="function">render_partial(<span class="type">$partial_id</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Renders a partial</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$partial_id</td>
+						<td class="description">The partial ID</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">The data passed to the partial</td></tr>
+						
+					</table>
+					
+					<code>
+
+						&lt;?= render_content(); ?&gt;
+
+					</code>
+					
+					<a name="helper-get-asset"></a>
+
+					<h5 class="function">get_asset(<span class="var">$type = ''</span>, <span class="var">$group = ''</span>)</h5>
+
+					<p>Renders asset tags</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="optional">optional</td><td class="type">(string)</td><td class="name">$type</td>
+						<td class="description">The asset type</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(string)</td><td class="name">$group</td>
+						<td class="description">The group</td></tr>
+						
+					</table>
+					
+					<code>
+
+						&lt;?= get_asset('js', 'bottom'); ?&gt;
+
+					</code>
+					
+					<a name="helper-get-css"></a>
+
+					<h5 class="function">get_css(<span class="var">$group = ''</span>)</h5>
+
+					<p>Renders CSS asset tags</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="optional">optional</td><td class="type">(string)</td><td class="name">$group</td>
+						<td class="description">The group</td></tr>
+						
+					</table>
+					
+					<code>
+
+						&lt;?= get_css('global'); ?&gt;
+
+					</code>
+					
+					<a name="helper-get-js"></a>
+
+					<h5 class="function">get_js(<span class="var">$group = ''</span>)</h5>
+
+					<p>Renders JS asset tags</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="optional">optional</td><td class="type">(string)</td><td class="name">$group</td>
+						<td class="description">The group</td></tr>
+						
+					</table>
+					
+					<code>
+
+						&lt;?= get_js('bottom'); ?&gt;
+
+					</code>
+					
+					<a name="helper-asset"></a>
+
+					<h5 class="function">asset(<span class="var">$type</span>, <span class="var">$name</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Renders a CSS, JS or image asset tag</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$type</td>
+						<td class="description">The asset type</td></tr>
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$name</td>
+						<td class="description">The asset name</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">The asset data</td></tr>
+						
+					</table>
+					
+					<code>
+
+						&lt;?= asset('css', 'main'); ?&gt;
+
+					</code>
+					
+					<a name="helper-css"></a>
+
+					<h5 class="function">css(<span class="var">$name</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Renders a CSS asset tag</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$name</td>
+						<td class="description">The asset name</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">The asset data</td></tr>
+						
+					</table>
+					
+					<code>
+
+						&lt;?= css('main'); ?&gt;
+
+					</code>
+					
+					<a name="helper-js"></a>
+
+					<h5 class="function">js(<span class="var">$name</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Renders a JS asset tag</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$name</td>
+						<td class="description">The asset name</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">The asset data</td></tr>
+						
+					</table>
+					
+					<code>
+
+						&lt;?= js('jquery', array()); ?&gt;
+
+					</code>
+					
+					<a name="helper-img"></a>
+
+					<h5 class="function">img(<span class="var">$name</span>, <span class="var">$data = array()</span>)</h5>
+
+					<p>Renders an image asset tag</p>
+					
+					<h6>Parameters</h6>
+					
+					<table class="parameters">
+
+						<tr><td class="required">required</td><td class="type">(string)</td><td class="name">$name</td>
+						<td class="description">The asset name</td></tr>
+						
+						<tr><td class="optional">optional</td><td class="type">(array)</td><td class="name">$data</td>
+						<td class="description">The asset data</td></tr>
+						
+					</table>
+					
+					<code>
+
+						&lt;?= img('backgrounds/body-background.png'); ?&gt;
+
+					</code>
+
+				</div>
+
+			</div>
+
+			<div id="footer">
+
+				<p>
+
+					<a href="#top">Top of Page</a>
+
+				</p>
+
+				<p>
+
+					<span class="copyright">Copyright &copy; 2010</span>
+					<a class="bucket" href="http://backstack.ca/projects/bucket">Bucket</a>
+					<a class="backstack" href="http://backstack.ca/">Backstack Development</a>
+
+				</p>
+
+			</div>
+
+		</div>
+
+	</body>
+
+	</html>

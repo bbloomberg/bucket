@@ -1,0 +1,726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>Bucket Documentation</title>
+
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/reset.css' />
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/global.css' />
+		
+		<!--[if IE 6]>
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/ie6.css' />
+		<![endif]-->
+		
+		<!--[if IE 7]>
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/ie7.css' />
+		<![endif]-->
+		
+		<meta name="author" content="Backstack Development" />
+
+		<meta http-equiv="expires" content="-1" />
+
+	</head>
+
+	<body>
+
+		<div id="container">
+
+			<div id="holder">
+				
+				<div id="header">
+
+					<div id="title">
+						
+						<h1>Bucket</h1>
+
+						<h2>A Layout and Asset Library for CodeIgniter</h2>
+						
+					</div>
+					
+					<ul id="navigation">
+						
+						<li class="first"><a href="index.html">Introduction</a></li>
+						<li><a href="downloading-and-installing.html">Downloading &amp; Installing</a></li>
+						<li class="current"><a href="usage.html">Usage</a></li>
+						<li class="last"><a href="function-reference.html">Function Reference</a></li>
+						
+					</ul>
+
+				</div>
+
+				<div id="content">
+
+					<h3>Usage</h3>
+
+					<h4>Configuring Bucket</h4>
+
+					<p>Bucket comes with a variety of configuration options to suit any taste.</p>
+
+					<table class="configuration">
+
+						<tr>
+
+							<th class="name">Name</th>
+							<th class="type">Type</th>
+							<th class="default">Default</th>
+							<th class="description">Description</th>
+
+						</tr>
+
+						<tr>
+
+							<td>bucket_layouts_path</td>
+							<td>string</td>
+							<td>layouts/</td>
+							<td>The path, relative to the CodeIgniter views path, where layout files are assumed to live</td>
+
+						</tr>
+
+						<tr>
+
+							<td>bucket_content_path</td>
+							<td>string</td>
+							<td>content/</td>
+							<td>The path, relative to the CodeIgniter views path, where content files are assumed to live</td>
+
+						</tr>
+
+						<tr>
+
+							<td>bucket_partials_path</td>
+							<td>string</td>
+							<td>partials/</td>
+							<td>The path, relative to the CodeIgniter views path, where partial files are assumed to live</td>
+
+						</tr>
+
+						<tr>
+
+							<td>bucket_assets_path</td>
+							<td>string</td>
+							<td>assets/</td>
+							<td>The path, relative to the CodeIgniter views path, where asset files are assumed to live</td>
+
+						</tr>
+
+						<tr>
+
+							<td>bucket_assets_cache_path</td>
+							<td>string</td>
+							<td>assets/</td>
+							<td>The path, relative to the CodeIgniter system cache path, where cached asset files are stored</td>
+
+						</tr>
+
+						<tr>
+
+							<td>bucket_assets_css_path</td>
+							<td>string</td>
+							<td>css/</td>
+							<td>The path, relative to the assets path, where CSS files are assumed to live</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>bucket_assets_js_path</td>
+							<td>string</td>
+							<td>js/</td>
+							<td>The path, relative to the assets path, where Javascript files are assumed to live</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>bucket_assets_img_path</td>
+							<td>string</td>
+							<td>img/</td>
+							<td>The path, relative to the assets path, where image files are assumed to live</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>bucket_assets_css_extension</td>
+							<td>string</td>
+							<td>.css</td>
+							<td>The extension for CSS files</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>bucket_assets_js_extension</td>
+							<td>string</td>
+							<td>.js</td>
+							<td>The extension for Javascript files</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>bucket_assets_url_path</td>
+							<td>string</td>
+							<td>assets/</td>
+							<td>The path for all assets, relative to the CodeIgniter base_url, used in asset URLs</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>bucket_asset_name_separator</td>
+							<td>string</td>
+							<td>--</td>
+							<td>The name separator for combined assets used in asset URLs</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>bucket_obfuscate_assets_timestamp</td>
+							<td>boolean</td>
+							<td>FALSE</td>
+							<td>If true, will cause the the assets timestamp used in asset URLs to be obfuscated</td>
+
+						</tr>
+
+					</table>
+
+					<h5>Using Behaviours</h5>
+
+					<p>Bucket comes with a handy feature that allows you to store and rapidly switch to different configuration set (a behaviour). The most prevalent use case for this would be to have a 'development' and a 'production' behaviour that you could switch to and from to optimize for different code environments.</p>
+					
+					<table class="configuration">
+
+						<tr>
+
+							<th class="name">Name</th>
+							<th class="type">Type</th>
+							<th class="default">Default</th>
+							<th class="description">Description</th>
+
+						</tr>
+
+						<tr>
+
+							<td>bucket_default_behaviour</td>
+							<td>string</td>
+							<td>development</td>
+							<td>The default behaviour used</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>bucket_behaviours</td>
+							<td>array</td>
+							<td>array(...)</td>
+							<td>The behaviours to be used</td>
+
+						</tr>
+						
+					</table>
+					
+					<p>Behaviours have the following configuration.</p>
+					
+					<table class="configuration">
+
+						<tr>
+
+							<th class="name">Name</th>
+							<th class="type">Type</th>
+							<th class="default">Default</th>
+							<th class="description">Description</th>
+
+						</tr>
+
+						<tr>
+
+							<td>minify_layout</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will minify layouts</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>minify_css</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will minify CSS assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>minify_js</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will minify Javascript assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>combine_css</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will combine CSS assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>combine_js</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will combine Javascript assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>browser_cache_css</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will force browser caching of CSS assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>browser_cache_js</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will force browser caching of Javascript assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>browser_cache_img</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will force browser caching of image assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>application_cache_css</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will cache optimized versions of CSS assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>application_cache_js</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will cache optimized versions of JS assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>application_cache_img</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will cache optimized versions of image assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>gzip_layout</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will gzip layouts</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>gzip_css</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will gzip CSS assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>gzip_js</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will gzip Javascript assets</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>gzip_img</td>
+							<td>boolean</td>
+							<td></td>
+							<td>If true, will gzip image assets</td>
+
+						</tr>
+						
+					</table>
+					
+					<p>Bucket will automatically use the behaviour specified by the 'default_behaviour' configuration item.</p>
+					
+					<h4>Initializing Bucket</h4>
+
+					<p>The following code loads and initializes Bucket based on your configuration settings:</p>
+
+					<code>
+
+						$this->load->library('bucket');
+
+					</code>
+					
+					<p>Alternatively, you can have Bucket autoloaded by adding it to the autoloaded libraries array in ./application/config/autoload.php:</p>
+
+					<code>
+
+						$autoload['libraries'] = array('bucket');
+
+					</code>
+					
+					<p>Getting back to behaviours, you can also force Bucket to use a specific behaviour immediately by passing an array of the behaviour id you'd like to use:</p>
+
+					<code>
+
+						$this->load->library('bucket', array('behaviour_id' => 'development'));
+
+					</code>
+					
+					<p>Or use one of Bucket's methods to do so:</p>
+					
+					<code>
+					
+						$this->bucket->set_behaviour_id('production');
+						
+					</code>
+					
+					<p>You can also get the current behaviour being used:</p>
+					
+					<code>
+					
+						$behaviour_id = $this->bucket->get_behaviour_id();
+						
+					</code>
+					
+					<p>And get specific items from that behaviour:</p>
+					
+					<code>
+					
+						$combine_css = $this->bucket->get_behaviour_item('combine_css');
+						
+					</code>
+					
+					<h4>Using Data</h4>
+
+					<p>Bucket makes it easy to pass data from your controllers to layouts, content, and partials.</p>
+
+					<p>Whenever you want to have data available in a view, use the set_data() method:</p>
+
+					<code>
+
+						$this->bucket->set_data('meta', array('keywords' => 'keyword 1, keyword2, keyword3'));
+
+					</code>
+
+					<p>Afterwards, you can get that data or remove it:</p>
+
+					<code>
+
+						$meta_data = $this->bucket->get_data('meta');
+
+					</code>
+
+					<code>
+
+						$this->bucket->remove_data('meta');
+
+					</code>
+
+					<p>Then, the data is available within your layout, content, and partials as a regular PHP variable:</p>
+
+					<code>
+
+						foreach($meta as $name => $content)
+						{
+							echo '&lt;meta name="$name" content="$content" /&gt;';
+						}
+
+					</code>
+
+					<h4>Rendering layout, content and partials</h4>
+
+					<p>For the most minimalist of operations, Bucket requires both a layout file and a content file be set.</p>
+
+					<p>To use a layout file named 'main.php':</p>
+
+					<code>
+
+						$this->bucket->set_layout_id('main');
+
+					</code>
+
+					<p>Setting the content is done similarly - in this case, a file named 'index.php' that lives in a 'user' directory will be used for content:</p>
+
+					<code>
+
+						$this->bucket->set_content_id('user/index');
+
+					</code>
+
+					<p>From that point, you just need to render the layout and content.</p>
+
+					<p>To render the content, simply set it as some data that the layout can use:</p>
+
+					<code>
+
+						$this->bucket->set_data('content', $this->bucket->get_content());
+
+					</code>
+
+					<p class="important">In this case, you can use whatever variable name you want - it doesn't have to be 'content'.</p>
+					
+					<p>'$content' will now be available for use inside your layout file as a plain old PHP variable.</p>
+
+					<p>Alternatively, you can use Bucket's helper to output the content right from your layout file (without needing to use set_data()):</p>
+
+					<code>
+
+						&lt;?= render_content(); ?&gt;
+
+					</code>
+
+					<p>To render the layout, simply call render_layout() to have the compiled layout sent to the browser:</p>
+
+					<code>
+
+						$this->bucket->render_layout();
+
+					</code>
+					
+					<p>Or return the data instead of sending it to the browser:</p>
+					
+					<code>
+
+						$layout = $this->bucket->render_layout();
+
+					</code>
+
+					<p>Partials can be grabbed from the controller or the view:</p>
+					
+					<code>
+
+						$this->bucket->set_data('best_widgets', $this->bucket->get_partial('widgets/best', array('widgets' => $widgets)));
+
+					</code>
+					
+					<code>
+
+						&lt;?= render_partial('widgets/best', array('widgets' => $widgets)); ?&gt;
+
+					</code>
+
+					<h4>Using assets</h4>
+					
+					<h5>Setting assets</h5>
+
+					<p>To add an asset, specify it's type, name, and, optionally, an array of options in your controller:</p>
+
+					<code>
+
+						$this->bucket->add_asset('css', 'reset');
+
+					</code>
+
+					<code>
+
+						$this->bucket->add_css('ie6', array('condcom' => 'IE6', 'combine' => FALSE));
+
+					</code>
+
+					<code>
+
+						$this->bucket->add_js('google-analytics.js', array('group' => 'analytics'));
+
+					</code>
+
+					<p>The options are as follows:</p>
+
+					<table class="configuration">
+
+						<tr>
+
+							<th>Name</th>
+							<th>Type</th>
+							<th>Default</th>
+							<th>Description</th>
+
+						</tr>
+						
+						<tr>
+
+							<td>type</td>
+							<td>string</td>
+							<td></td>
+							<td>(Only applicable to CSS tags) The type of tag used (&lt;link /&gt; or @import)</td>
+
+						</tr>
+
+						<tr>
+
+							<td>attributes</td>
+							<td>array</td>
+							<td>array(...)</td>
+							<td>The attributes for an asset tag</td>
+
+						</tr>
+						
+						<tr>
+
+							<td>condcom</td>
+							<td>mixed</td>
+							<td>''</td>
+							<td>Any conditional comment surrounding an asset tag</td>
+
+						</tr>
+
+						<tr>
+
+							<td>combine</td>
+							<td>boolean</td>
+							<td>TRUE</td>
+							<td>Whether or not the asset will be combined with other similar assets</td>
+
+						</tr>
+
+						<tr>
+
+							<td>cache</td>
+							<td>boolean</td>
+							<td>TRUE</td>
+							<td>Whether or not the browser will cache the asset forever</td>
+
+						</tr>
+
+						<tr>
+
+							<td>group</td>
+							<td>string</td>
+							<td>''</td>
+							<td>Any group that the asset will be assigned to</td>
+
+						</tr>
+
+					</table>
+
+					<h5>Rendering asset tags</h5>
+					
+					<p>The easiest way to output the assets is with the helper functions.</p>
+					
+					<code>
+						
+						&lt;?= get_assets(); ?&gt;
+						
+					</code>
+					
+					<p>For more control on the output, you can specify the asset type and options.</p>
+					
+					<code>
+						
+						&lt;?= get_assets('js', 'analytics'); ?&gt;
+						
+					</code>
+					
+					<p>Or, you can use more specific methods to change the asset type.</p>
+
+					<code>
+						
+						&lt;?= get_css(); ?&gt;
+						
+					</code>
+					
+					<p>To output an image, use the helper:</p>
+
+					<code>
+
+						&lt;?= img('logo.png'); ?&gt;
+
+					</code>
+
+					<p>You can also quickly output single CSS and JS files the same way that you can for an image:</p>
+
+					<code>
+
+						&lt;?= css('menu_ie', array('condcom' => 'gte IE6')); ?&gt;
+						
+					</code>
+
+					<code>
+						
+						&lt;?= js('menu', array('cache' => FALSE)); ?&gt;
+						
+					</code>
+					
+					<code>
+						
+						&lt;?= asset('css', 'global'); ?&gt;
+						
+					</code>
+
+					<p>The 'combine' and 'group' options are not available for usage for this type.</p>
+					
+					<h4>Rendering assets</h4>
+					
+					<p>This is already set up for you in the asset controller, layout, and content files.</p>
+					
+					<code>
+						
+						&lt;?= $this->bucket->render_asset_set($assets_id, $assets_type, $assets_extension, $assets_names); ?&gt;
+						
+					</code>
+					
+					<p class="critical">Be sure that you've added the route to your routes.php configuration file - otherwise assets won't get rendered!</p>
+
+				</div>
+
+			</div>
+
+			<div id="footer">
+
+				<p>
+
+					<a href="#top">Top of Page</a>
+
+				</p>
+
+				<p>
+
+					<span class="copyright">Copyright &copy; 2010</span>
+					<a class="bucket" href="http://backstack.ca/projects/bucket">Bucket</a>
+					<a class="backstack" href="http://backstack.ca/">Backstack Development</a>
+
+				</p>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>

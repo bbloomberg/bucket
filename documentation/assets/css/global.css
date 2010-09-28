@@ -1,0 +1,331 @@
+html, body, #container
+{
+	height: 100%;
+}
+
+body
+{
+	color: #333;
+	background-color: #FFF;
+	font-family: Lucida Grande, Verdana, Geneva, Sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+a {
+	color: #0071A2;
+	text-decoration: underline;
+	font-weight: normal;
+	outline-style: none;
+}
+
+a:hover
+{
+	color: #0071A2;
+	text-decoration: underline;
+}
+
+#container
+{
+	
+}
+
+#holder
+{
+	position: relative;
+	min-height: 100%;
+}
+
+#footer
+{
+	position: relative;
+	height: 50px;
+	margin-top: -50px;
+}
+
+#header
+{
+	position: relative;
+	padding: 25px 50px 0;
+	color: #EEE;
+	background: #333;
+}
+
+#title
+{
+	padding-bottom: 60px;
+}
+
+#title h1
+{
+	font-size: 25px;
+	line-height: 40px;
+}
+
+#title h2
+{
+	font-size: 18px;
+}
+
+#navigation
+{
+	position: absolute;
+	bottom: 0;
+}
+
+#navigation li
+{
+	float: left;
+	margin: 0 5px;
+}
+
+#navigation li.first
+{
+	margin-left: 0;
+}
+
+#navigation li.last
+{
+	margin-right: 0;
+}
+
+#navigation li a
+{
+	display: block;
+	padding: 10px 20px;
+	color: #CCC;
+	background: #444;
+	text-decoration: none;
+}
+
+#navigation li.current a
+{
+	color: #111;
+	background: #FFF;
+}
+
+#content
+{
+	padding: 15px 50px 75px;
+}
+
+#content h3, #content h4, #content h5, #content p, #content ul, #content dl, #content table, #content code, #content pre
+{
+	clear: left;
+	margin-bottom: 15px;
+}
+
+#content h6
+{
+	margin-bottom: 5px;
+}
+
+#content h3, #content h4, #content h5
+{
+	border-bottom: 1px solid #666;
+	padding-bottom: 7px;
+}
+
+#content h3
+{
+	font-size: 25px;
+}
+
+#content h4
+{
+	font-size: 20px;
+}
+
+#content h5
+{
+	font-size: 16px;
+}
+
+#content h6
+{
+	font-size: 14px;
+}
+
+#content code, #content pre
+{
+	display: block;
+	padding: 12px 10px 12px 10px;
+	border: 1px solid #D0D0D0;
+	font-size: 12px;
+	font-family: Monaco, Verdana, Sans-serif;
+	color: #002166;
+	background-color: #f9f9f9;
+}
+
+#content .navigation
+{
+	float: left;
+	width: 100%;
+	padding-bottom: 15px;
+}
+
+#content .navigation li
+{
+	float: left;
+	width: 45%;
+}
+
+#content .navigation li ul
+{
+	float: left;
+	margin-top: 10px;
+}
+
+#content .navigation li ul li
+{
+	float: left;
+	width: 200px;
+	margin: 2px 0 1px;
+}
+
+#content ul
+{
+	padding-left: 15px;
+}
+
+#content li, #content td.optional, #content td.required, #content p.returns
+{
+	padding-left: 30px;
+	background: url(../img/arrow.gif) 10px 4px no-repeat;
+}
+
+#content table.parameters
+{
+	
+}
+
+#content table.parameters td
+{
+	font-size: 14px;
+}
+
+#content dl.parameters
+{
+	width: 100%;
+}
+
+#content dl.parameters dt
+{
+	float: left;
+	width: 225px;
+	margin-right: 10px;
+}
+
+#content .parameters .description
+{
+	font-style: italic;
+}
+
+#content .parameters .optional, #content .parameters .required
+{
+	color: #880120;
+}
+
+#content .parameters .type
+{
+	padding-left: 10px;
+	text-align: right;
+	padding-right: 5px;
+}
+
+#content .parameters .type, #content .returns .type
+{
+	color: #888;
+	font-weight: bold;
+}
+
+#content .parameters .name
+{
+	padding-right: 10px;
+}
+
+#content p.returns
+{
+	font-style: italic;
+}
+
+#content .var
+{
+	color: #8F5B00;
+}
+
+#content table.configuration
+{
+	width: 100%;
+	border: 1px solid #999;
+}
+
+#content table.configuration th
+{
+	padding: 4px;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: left;
+	color: #FFF;
+	background-color: #666;
+}
+
+#content table.configuration .name, #content table.configuration .type, #content table.configuration .default
+{
+	width: 10%;
+}
+
+#content table.configuration .description
+{
+	width: 70%;
+	text-align: left;
+}
+
+#content table.configuration td
+{
+	padding: 6px;
+	font-size: 12px;
+	background-color: #f3f3f3;
+}
+
+#content .important
+{
+	margin: 10px 0 5px 0;
+	padding: 10px;
+	border: 1px solid #D893A1;
+	color: #333;
+	background: #FBE6F2;
+}
+
+#content .critical
+{
+	margin: 10px 0 5px 0;
+	padding: 10px;
+	border: 1px solid #E68F8F;
+	color: #333;
+	background: #FBE6F2;
+}
+
+#footer
+{
+	font-size: 10px;
+	text-align: center;
+}
+
+#footer p
+{
+	font-size: 10px;
+	color: #999;
+	text-align: center;
+}
+
+#footer .copyright, #footer .bucket, #footer .backstack
+{
+	padding: 0 5px;
+}
+
+#footer .bucket
+{
+	border: 1px solid #CCC;
+	border-width: 0 1px;
+}

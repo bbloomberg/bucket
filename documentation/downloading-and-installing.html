@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		
+		<title>Bucket Documentation</title>
+
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/reset.css' />
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/global.css' />
+		
+		<!--[if IE 6]>
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/ie6.css' />
+		<![endif]-->
+		
+		<!--[if IE 7]>
+		<link rel='stylesheet' type='text/css' media='all' href='assets/css/ie7.css' />
+		<![endif]-->
+		
+		<meta name="author" content="Backstack Development" />
+
+		<meta http-equiv="expires" content="-1" />
+
+	</head>
+
+	<body>
+
+		<div id="container">
+
+			<div id="holder">
+				
+				<div id="header">
+
+					<div id="title">
+						
+						<h1>Bucket</h1>
+
+						<h2>A Layout and Asset Library for CodeIgniter</h2>
+						
+					</div>
+					
+					<ul id="navigation">
+						
+						<li class="first"><a href="index.html">Introduction</a></li>
+						<li class="current"><a href="downloading-and-installing.html">Downloading &amp; Installing</a></li>
+						<li><a href="usage.html">Usage</a></li>
+						<li class="last"><a href="function-reference.html">Function Reference</a></li>
+						
+					</ul>
+
+				</div>
+
+				<div id="content">
+				
+					<h3>Downloading &amp; Installing</h3>
+
+					<h4>Requirements</h4>
+
+					<p>To use Bucket, you'll need a working installation of CodeIgniter (1.6.x - 2.0-dev) on PHP5.</p>
+					
+					<h4>Getting the code</h4>
+				
+					<p>Bucket can be downloaded from it's repository on <a href="http://github.com/backstack/bucket">Github</a>.</p>
+				
+					<h4>Installing</h4>
+				
+					<p>Once you've downloaded the Bucket package, copy each of these files to your CodeIgniter application directory.</p>
+				
+					<ul>
+						
+						<li><span class="file">./application/libraries/Bucket.php</span></li>
+						<li><span class="file">./application/libraries/Bucket/</span></li>
+						<li><span class="file">./application/helpers/bucket_helper.php</span></li>
+						<li><span class="file">./application/config/bucket.php</span></li>
+						<li><span class="file">./application/controllers/assets/index.php</span></li>
+						
+					</ul>
+					
+					<p>Then <em>add</em> the single route from the routes.php file to your own routes.php file.</p>
+					
+					<ul>
+						
+						<li><span class="file">./application/config/routes.php</span></li>
+						
+					</ul>
+					
+					<p>You'll then need to create the following directories (you can change the names of these later if you want):</p>
+					
+					<ul>
+						
+						<li><span class="file">./application/views/layouts/</span></li>
+						<li><span class="file">./application/views/content/</span></li>
+						<li><span class="file">./application/views/partials/</span></li>
+						<li><span class="file">./application/views/assets/</span></li>
+						<li><span class="file">./application/views/assets/css</span></li>
+						<li><span class="file">./application/views/assets/js</span></li>
+						<li><span class="file">./application/views/assets/img</span></li>
+						<li><span class="file">./system/cache/assets/</span></li>
+						
+					</ul>
+					
+					<p class="important">Be sure that ./system/cache/assets/ is writable by your web server!</p>
+					
+					<p>That's it! Head over to the <a href="usage.html">usage page</a> to start having fun with Bucket!</p>
+
+				</div>
+
+			</div>
+
+			<div id="footer">
+
+				<p>
+
+					<a href="#top">Top of Page</a>
+
+				</p>
+
+				<p>
+
+					<span class="copyright">Copyright &copy; 2010</span>
+					<a class="bucket" href="http://backstack.ca/projects/bucket">Bucket</a>
+					<a class="backstack" href="http://backstack.ca/">Backstack Development</a>
+
+				</p>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
