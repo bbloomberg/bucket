@@ -18,7 +18,7 @@ class Index extends Controller {
 		
 		$assets_names = implode("/", array_splice($segments, 4));
 
-		$this->bucket->set_data('asset', $this->bucket->render_asset($assets_type, $assets_extension, $assets_names));
+		$this->bucket->set_data('asset', $this->bucket->render_asset_set($assets_type, $assets_extension, $assets_names));
 	}
 }
 

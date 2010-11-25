@@ -850,7 +850,7 @@ class Bucket
 	 * @param string $names A separated list of asset names
 	 * @param boolean $return Return or echo the asset set
 	 **/
-	public function render_asset($type, $extension, $names, $return = TRUE)
+	public function render_asset_set($type, $extension, $names, $return = TRUE)
 	{
 		$this->_is_asset_layout = TRUE;
 		
