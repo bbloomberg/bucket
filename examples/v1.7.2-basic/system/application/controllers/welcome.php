@@ -15,6 +15,8 @@ class Welcome extends Controller {
 		
 		$this->bucket->set_content_id('welcome_message');
 		
+		$this->bucket->add_css('style');
+		
 		$this->bucket->render_layout();
 	}
 }
