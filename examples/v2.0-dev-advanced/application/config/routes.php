@@ -36,7 +36,7 @@ $route['default_controller'] = "welcome/index";
 
 // Assets
 
-	$route['assets/([0-9a-zA-Z]+/)?(css|js|img)/([a-zA-Z0-9\-\/]+)([a-zA-Z\.]{2,4})'] = "assets/index/index/$2/$4/$3";
+	$route['assets/([0-9a-zA-Z]+/)?(css|js|img)/([a-zA-Z0-9\-_\/]+)([a-zA-Z\.]{2,4})'] = "assets/index/index/$2/$4/$3";
 	
 // Home
 
