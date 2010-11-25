@@ -6,7 +6,7 @@
  * A layout and asset library for CodeIgniter
  * 
  * @package		Bucket
- * @version		0.1.0
+ * @version		0.1.1
  * @author		Backstack Development <http://backstack.ca>
  * @link		http://backstack.ca/projects/bucket
  * @copyright	Copyright (c) 2010, Backstack Development
