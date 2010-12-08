@@ -391,7 +391,7 @@ class Bucket
 	 **/
 	public function get_data($key = '')
 	{
-		if($name)
+		if($key)
 		{
 			return $this->_data[$key];
 		}
