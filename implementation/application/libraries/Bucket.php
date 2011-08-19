@@ -52,7 +52,7 @@ class Bucket
 	 **/
 	private function _configure($config)
 	{	
-		$this->_ci->load->config('bucket');
+		$this->_ci->load->config('bucket/bucket');
 		
 		$defaults = array(
 		
@@ -1281,7 +1281,8 @@ class Bucket
 	 **/
 	private function _get_view_path()
 	{
-		return $this->_ci->load->_ci_view_path;
+		//return $this->_ci->load->_ci_view_paths;
+		return APPPATH.'views/';
 	}
 }
 

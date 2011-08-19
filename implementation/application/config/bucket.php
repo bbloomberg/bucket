@@ -17,9 +17,9 @@
 $config['bucket_layouts_path'] = 'layouts/';
 $config['bucket_content_path'] = 'content/';
 $config['bucket_partials_path'] = 'partials/';
-$config['bucket_assets_path'] = 'assets/';
+$config['bucket_assets_path'] = '../assets/';
 
-$config['bucket_assets_cache_path'] = 'assets/';
+$config['bucket_assets_cache_path'] = '../assets/';
 
 $config['bucket_assets_css_path'] = 'css/';
 $config['bucket_assets_js_path'] = 'js/';
